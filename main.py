@@ -59,6 +59,8 @@ def getlabel(labelname):
 
 
 while finallyEnded == 0:
+    print(code[pointer])
+    print(stack)
     match code[pointer][0]:
         case "":
             stack.append(code[pointer][1])
@@ -145,11 +147,14 @@ while finallyEnded == 0:
             if not compare:
                 pointer = getlabel(code[pointer][1]) 
         case "󰫮":
-            stack.append(ord(stack.pop))
+            stack.append(ord(stack.pop()))
         case "󰫮":
-            stack.append(chr(stack.pop))
+            stack.append(chr(stack.pop()))
         case "󰫮":
-            stack.append(stack[len(stack)-1].pop(0))
+            idk1 = list(stack[len(stack)-1])
+            
+            stack.append(idk1.pop(0))
+            stack[len(stack)-2] = ''.join(idk1)
         case "":
             cellpointer = int(stack.pop())%1024
         case "󰍉":
