@@ -59,8 +59,8 @@ def getlabel(labelname):
 
 
 while finallyEnded == 0:
-    print(code[pointer])
-    print(stack)
+    #print(code[pointer])
+    #print(stack)
     match code[pointer][0]:
         case "":
             stack.append(code[pointer][1])
@@ -165,9 +165,9 @@ while finallyEnded == 0:
             print("(command", str(pointer)+") idk whats", code[pointer][0], ":(")
             finallyEnded = 1
     #pov: debbuging a program:
-    print(code[pointer])
-    print(stack)
-    if int(input('!')): print(cells, cellpointer)
+    #print(code[pointer])
+    #print(stack)
+    #if int(input('!')): print(cells, cellpointer)
 
     pointer += 1
 
