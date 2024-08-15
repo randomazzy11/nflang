@@ -1,0 +1,5 @@
+this is how the hello world program would look if my peanut brain didnt think "what if i made it unreadable"
+
+pushÞHello, World!πprintπbyeπ
+
+i have no idea why i thought the þorns and pi were a good idea
