@@ -10,7 +10,7 @@ if len(sys.argv) == 1:
     code = ast.literal_eval(shlex.quote(input("Enter code:"))) #copied and pasted from stackoverflow
 else:
     code = ast.literal_eval(shlex.quote(open(sys.argv[1], "r").read())) #this looks wrong
-#print(code[len(code)-1])
+
 
 
 if code[len(code)-1] != '':
@@ -20,7 +20,7 @@ if code[len(code)-1] != '':
 code = code.split('')
 
 if code[len(code)-1] == '': code.pop() #i dont know why but this thing looks wrong
-#print(code)
+
 
 if code[len(code)-1] != '󰩈':
     print("Last command in the code isnt 󰩈 and i decided to make that an error because why not")
@@ -28,7 +28,7 @@ if code[len(code)-1] != '󰩈':
 
 for i in range(len(code)):
     code[i] = code[i].split('')
-#print(code)
+
 
 labels = []
 
@@ -36,10 +36,10 @@ for i in range(len(code)):
     if code[i][0] == '󰌕':
         labels.append([code[i][1], i])
 
-#print(labels)
+
 
 cells = [0 for i in range(1024)]
-#print(len(cells))
+
 subroutinestack = []
 stack = []
 idk1 = 0
@@ -59,8 +59,6 @@ def getlabel(labelname):
 
 
 while finallyEnded == 0:
-    #print(code[pointer])
-    #print(stack)
     match code[pointer][0]:
         case "":
             stack.append(code[pointer][1])
@@ -164,10 +162,6 @@ while finallyEnded == 0:
         case _:
             print("(command", str(pointer)+") idk whats", code[pointer][0], ":(")
             finallyEnded = 1
-    #pov: debbuging a program:
-    #print(code[pointer])
-    #print(stack)
-    #if int(input('!')): print(cells, cellpointer)
 
     pointer += 1
 
